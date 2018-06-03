@@ -28,4 +28,44 @@ public class ValidatorUnitTest {
     public void testStage1_Case4() {
         assertEquals(Validator.stage1("qwertyuiop"), 2);
     }
+
+    /* JUnit test cases of stage 2
+     * Rule 3 - requiring at least 1 special character
+     * Rule 4 - requiring at least 1 digit
+     * Rule 5 - requiring both upper and lower case
+     */
+    @Test
+    public void testStage2_Case1() {
+        assertEquals(Validator.stage2("zxcv!"), 2);
+    }
+
+    @Test
+    public void testStage2_Case2() {
+        assertEquals(Validator.stage2("zxcvbnm@"), 3);
+    }
+
+    @Test
+    public void testStage2_Case3() {
+        assertEquals(Validator.stage2("zxcvbnm1234"), 3);
+    }
+
+    @Test
+    public void testStage2_Case4() {
+        assertEquals(Validator.stage2("ZXCVbnm#"), 4);
+    }
+
+    @Test
+    public void testStage2_Case5() {
+        assertEquals(Validator.stage2("ASDFghjk1234"), 4);
+    }
+
+    @Test
+    public void testStage2_Case6() {
+        assertEquals(Validator.stage2("ASDFghjk$5678"), 5);
+    }
+
+    @Test
+    public void testStage2_Case7() {
+        assertEquals(Validator.stage2("QwErTyUiOp&*1234567890"), 5);
+    }
 }
