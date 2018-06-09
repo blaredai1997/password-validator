@@ -10,9 +10,7 @@ public class ValidatorUnitTest {
      * Rule 2 - it is at least 8 characters long
      */
     @Test
-    public void testStage1_Case1() {
-        assertEquals(Validator.stage1(""), 0);
-    }
+    public void testStage1_Case1() { assertEquals(Validator.stage1(""), 0); }
 
     @Test
     public void testStage1_Case2() {
@@ -35,9 +33,7 @@ public class ValidatorUnitTest {
      * Rule 5 - requiring both upper and lower case
      */
     @Test
-    public void testStage2_Case1() {
-        assertEquals(Validator.stage2("zxcv!"), 2);
-    }
+    public void testStage2_Case1() { assertEquals(Validator.stage2("zxcv!"), 2); }
 
     @Test
     public void testStage2_Case2() {
